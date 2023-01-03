@@ -1,0 +1,50 @@
+<!-- 1. -->
+<!-- <script>
+  const funA = () => {
+    setTimeout(function () {
+      console.log(`welcome FunA`);
+    }, 3000);
+  };
+
+  const funB = () => {
+    console.log(`welcome FunB`);
+  };
+
+  funA();
+  funB(); 
+</script>
+ in this code we firstly call funA() but in console output is firstly print value of funcB and after 3 second funA because of setTimeout.      -->
+
+<!-- 2. -->
+<!-- how to deal this type of problem just call funB() in funA. -->
+<!-- <script>
+  const funA = () => {
+    setTimeout(function () {
+      console.log(`welcome FunA`);
+      funB();
+    }, 3000);
+  };
+
+  const funB = () => {
+    console.log(`welcome FunB`);
+  };
+
+  funA();
+</script> -->
+
+<!-- 3. -->
+<script>
+  //perOne function have two parameters
+  const perOne = (friend, callfriend) => {
+    console.log(
+      `I am busy right Now. I am talking to ${friend}. I will call you back `
+    );
+    callfriend();
+  };
+
+  const perTwo = () => {
+    console.log(`Hey what's up. I call back you dekha na . `);
+  };
+
+  perOne("Pawan", perTwo); // passing function perTwo as argument at the time of calling a function perOne. This is called callback function.
+</script>

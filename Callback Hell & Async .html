@@ -1,0 +1,41 @@
+<script>
+  // Task is get following data from API.
+  // 1. 2s student roll no.
+  // 2. 2s name & age
+  // 3. 2s gender
+
+  const getRollNo = () => {
+    setTimeout(() => {
+      console.log(`API getting roll no.`);
+      let roll_no = [1, 2, 3, 4, 5];
+      console.log(roll_no);
+      setTimeout(
+        (roll_no) => {
+          const biodata = {
+            name: "Tarun",
+            age: 34,
+          };
+          console.log(
+            `My roll no. is ${roll_no},My name is ${biodata.name} and my age is ${biodata.age} years old.`
+          );
+          setTimeout(
+            (name) => {
+              biodata.gender = "Male";
+              console.log(
+                `My roll no. is ${roll_no} , My name is ${biodata.name} , my age is ${biodata.age} years old , My gender is ${biodata.gender}. `
+              );
+            },
+            2000,
+            biodata.name
+          );
+        },
+        2000,
+        roll_no[1]
+      );
+    }, 2000);
+  };
+
+  getRollNo();
+</script>
+<!-- all of them connected to next setTimout -->
+<!-- to prevent callback hell ,the solution is Promises. -->
